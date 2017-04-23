@@ -1,0 +1,15 @@
+Compiling and Running the Program:
+
+1.	Import the project into eclipse IDE. Project name is RingApplicationDS.
+2.	Start the server by running RelayServer class as “java application”
+3.	Start the client by running Nodes class as “java application”
+a.	The above process pops up a client window
+b.	Repeat the same process for as many clients as needed
+c.	Node number is mentioned as the window title
+
+4.	One can then start election process to setup an initial ring network with a coordinator that will be election by this process.
+5.	Once the coordinator is elected the token message is passed between the nodes in the ring network. This can be witnessed by looking at the messages that at displayed at each node on the GUI.
+6.	Now we can crash the coordinator node by clicking on the close button of that process window.
+7.	It can be seen that the nodes start a re-election if it doesn’t get the connection check token for a particular interval of time (in our case it’s for 60 seconds).
+8.	All the nodes start the re-election simultaneously and elects a coordinator and the process continues.
+9.	If a new node is brought up in the network it starts an election and elects a new coordinator.
